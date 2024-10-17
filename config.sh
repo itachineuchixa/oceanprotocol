@@ -22,20 +22,8 @@ chmod +x ocean-node-quickstart.sh
 # Запуск скрипта установки
 ./ocean-node-quickstart.sh
 
-# Запрашиваем ввод приватного ключа
-read -p "Введите ваш приватный ключ (без '0x'): " private_key
-private_key="0x$private_key"
-
-# Запрашиваем ввод публичного адреса
-read -p "Введите ваш публичный адрес EVM: " public_address
-
-# Пропускаем 5 раз (нажимаем Enter)
-for i in {1..5}; do
-  echo ""
-done
-
 # Запрашиваем IP-адрес сервера
-read -p "Введите IP адрес вашего сервера: " server_ip
+read -p "Нажмите enter чтобы продолжить: " skip
 
 # Запуск ноды
 docker-compose up -d
